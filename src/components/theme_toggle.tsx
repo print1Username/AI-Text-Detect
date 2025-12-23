@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Sun, Moon } from 'lucide-react'
+import Button from './button'
 
 export default function ThemeToggle() {
   // Initialize state from localStorage or system preference
@@ -28,15 +29,17 @@ export default function ThemeToggle() {
   }
 
   return (
-    <button
-      onClick={toggleTheme}
-      className="flex items-center gap-2 rounded-lg px-3 py-2 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
-    >
-      {theme === 'dark' ? (
-        <><Sun size={18} className="text-yellow-400" /> <span>Light Mode</span></>
-      ) : (
-        <><Moon size={18} className="text-slate-700" /> <span>Dark Mode</span></>
-      )}
-    </button>
+    <div className='theme-toggle'>
+      <Button 
+        onClick={toggleTheme}
+        className="flex items-center gap-2 rounded-lg px-3 py-2 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
+      >
+        {theme === 'dark' ? (
+          <><Sun size={18} className="text-yellow-400" /> <span>Light Mode</span></>
+        ) : (
+          <><Moon size={18} className="text-slate-700" /> <span>Dark Mode</span></>
+        )}
+      </Button >
+    </div>
   )
 }
