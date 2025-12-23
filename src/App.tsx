@@ -1,11 +1,11 @@
 import './App.css'
 
 import { Bot } from 'lucide-react';
-import { ImageUp } from 'lucide-react';
 import { Link } from 'lucide-react';
 
 import ThemeToggle from './components/theme_toggle';
 import Button from './components/button'
+import UploadImageButton from './components/upload_image_button';
 
 function App() {
   return (
@@ -17,9 +17,7 @@ function App() {
         This is the AI Text detector website.
       </p>
 
-      <Button >
-        Upload Image <ImageUp />
-      </Button >
+      <UploadImageButton/>
 
       <Button >
         Image with link <Link/>
