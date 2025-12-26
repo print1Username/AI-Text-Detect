@@ -4,6 +4,24 @@ This is a website that can detect fonts in images. Simply upload an image, and i
 \
 If you prefer not to upload images, this website also supports uploading via image URLs.
 
+## Running
+To run this program locally, you need to prepare the following:
+Node.js, React components, Docker
+- For the Node.js, we can just download in official website: [Nodejs](https://nodejs.org/en)
+- Docker can also be downloaded from the official website. [Docker](https://www.docker.com/)
+
+For other components, we can proceed with the download directly.
+After downloading these environments, we need to download the required components.
+```
+npm install i
+npm install react-router-dom
+```
+
+After downloading it, simply run Docker.
+```
+docker compose up --build
+```
+
 ## Introduction
 
 When you enter this website, you'll see a simple homepage.
