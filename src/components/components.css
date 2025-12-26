@@ -58,23 +58,22 @@ transform: scale(0.95);
     color: white;
   }
   
+.link-bar {
+  width: 100%;
+  max-width: 400px;
+  align-items: center;    
 
-  .link-bar {
-    width: 100%;
-    max-width: 400px;
-    align-items: center;    
-  
-    padding: 1.0em 1.2em;
-    margin: 10px;
-    margin-left: -15px;
-    font-size: 1em;
-    font-family: inherit;
-  
-    border-radius: 8px;
-    border: 1px solid;
-    background-color: white;
-    border-color: whitesmoke;
-    color: #d1d5db;
+  padding: 1.0em 1.2em;
+  margin: 10px;
+  margin-left: -15px;
+  font-size: 1em;
+  font-family: inherit;
+
+  border-radius: 8px;
+  border: 1px solid;
+  background-color: white;
+  border-color: whitesmoke;
+  color: #1a1a1a;
 
     transition:
       border-color 0.25s ease,
@@ -82,7 +81,13 @@ transform: scale(0.95);
       color 0.25s ease,
       opacity 0.2s ease,
       transform 0.2s ease;
-  }
+}
+
+html.dark .link-bar {
+  background-color: #1a1a1a;
+  border-color: black;
+  color:whitesmoke;
+}
 
 /* container */
 .link-bar-wrapper {
