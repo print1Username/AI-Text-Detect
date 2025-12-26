@@ -1,5 +1,7 @@
 import type { InputHTMLAttributes } from 'react'
 
+import { Clipboard } from 'lucide-react';
+
 interface LinkBarProps extends InputHTMLAttributes<HTMLInputElement> {
   value?: string
   onChange?: (value: string) => void

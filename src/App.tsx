@@ -17,9 +17,10 @@ function App() {
   return (
     <>
       <Bot className="logo" size={125} />
-      <h1>Text AI Detector</h1>
+      <h1>Text Detector</h1>
 
-      <p>This is the AI Text detector website.</p>
+      <p>This is the Text detector website</p>
+      <p>You can choose to upload the image or insert the image link</p>
 
       <UploadImageButton />
 
@@ -30,11 +31,7 @@ function App() {
         Image with link <Link />
       </Button>
 
-      <div
-        className={`link-bar-wrapper ${
-          showLinkBar ? 'visible' : 'hidden'
-        }`}
-      >
+      <div className={`link-bar-wrapper ${ showLinkBar ? 'visible' : 'hidden' }`}>
         <div className="link-bar-inner">
           <LinkBar value={link} onChange={setLink} />
         </div>
