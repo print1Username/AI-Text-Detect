@@ -14,14 +14,35 @@ export default function LinkBar({
   className,
   ...props
 }: LinkBarProps) {
+
+  const handlePaste = async () => {
+    try {
+      const text = await navigator.clipboard.readText()
+      onChange?.(text)
+    } catch (err) {
+      console.error('Failed to read clipboard', err)
+    }
+  }
+
   return (
-    <input
-      type="url"
-      value={value}
-      placeholder={placeholder}
-      onChange={(e) => onChange?.(e.target.value)}
-      className={`link-bar ${className ?? ''}`}
-      {...props}
-    />
+    <div>
+      <input
+        type="url"
+        value={value}
+        placeholder={placeholder}
+        onChange={(e) => onChange?.(e.target.value)}
+        className={`link-bar ${className ?? ''}`}
+        {...props}
+      />
+
+      <button
+        type="button"
+        onClick={handlePaste}
+        className="link-bar-clipboard"
+        aria-label="Paste from clipboard"
+      >
+        <Clipboard />
+      </button>
+    </div>
   )
 }

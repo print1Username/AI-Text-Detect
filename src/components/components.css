@@ -145,3 +145,29 @@ html.dark .link-bar-input {
 .link-bar-inner {
   overflow: visible;
 }
+
+/*Link Bar paste button*/
+.link-bar-clipboard {
+  size: 18px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  color: #1a1a1a;
+
+  transition: 
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.link-bar-clipboard:hover {
+  color:black;
+}
+
+html.dark .link-bar-clipboard {
+  background-color: #1a1a1a;
+  color: whitesmoke;
+}
