@@ -1,27 +1,26 @@
 import { useLocation, useNavigate } from 'react-router-dom'
 
+import BackButton from './components/back_button';
 import DetectImage from './components/detect_image';
 import ThemeToggle from './components/theme_toggle';
 
 export default function Detect() {
-    const location = useLocation()
+    const { state } = useLocation()
     const navigate = useNavigate()
-    const link = location.state?.link
-    const text = ''
 
-    if (!link){
+    if (!state?.link){
         navigate('/')
         return null
     }
 
     return (
         <>
+            <BackButton/>
             <h1>Image</h1>
-            <DetectImage link={link}/>
-
-            <h2>Detected Text</h2>
-            <p>{text}</p>
-
+            <DetectImage 
+                link={state?.link}
+                file={state?.file}
+            />
             <ThemeToggle/>
 
         </>
