@@ -1,5 +1,7 @@
 # Text detected OCR Website
 
+[![Run Vitest](https://github.com/print1Username/Text-Detect/actions/workflows/vitest.yml/badge.svg)](https://github.com/print1Username/Text-Detect/actions/workflows/vitest.yml)
+
 This is a website that can detect fonts in images. Simply upload an image, and it will identify the fonts within it.
 \
 If you prefer not to upload images, this website also supports uploading via image URLs.
