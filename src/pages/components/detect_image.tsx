@@ -61,10 +61,8 @@ export default function DetectImage({ link, file }: DetectImageProps) {
         />
       )}
 
-      <div className='flex items-center gap-3'>
-        <h2>Detect Text:</h2>
-        <CopyButton text={text}/>
-      </div>
+      <h2>Detect Text:</h2>
+      <CopyButton text={text}/>
 
 
       <pre className="detect-image-text">{text}</pre>
