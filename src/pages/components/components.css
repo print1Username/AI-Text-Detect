@@ -205,13 +205,39 @@ html.dark .link-bar-arrow {
 
 .detect-image-text {
   border-style:groove;
+  border-radius: 5px;
   padding: 10px;
   font-size: large;
 }
 
 .back-button {
-    position: fixed;
     left: 16px;
     top: 16px;
     z-index: 1000;
+}
+
+.copy-button {
+  position: static;
+  border-style: outset;
+  border-radius: 5px;
+  font-size: 18px;
+  background: none; 
+  color:#1a1a1a;
+  height: 32px;
+  width: 32px;
+  margin-top: -30px;
+
+  transition:
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.copy-button:hover {
+  transition: 70%;
+}
+
+html.dark .copy-button {
+  background: none; 
+
+  color:whitesmoke;  
 }

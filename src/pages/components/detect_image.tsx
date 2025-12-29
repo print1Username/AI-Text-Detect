@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import CopyButton from './copy_button'
 
 interface DetectImageProps {
   link?: string
@@ -60,7 +61,12 @@ export default function DetectImage({ link, file }: DetectImageProps) {
         />
       )}
 
-      <h2>Detect Text:</h2>
+      <div className='flex items-center gap-3'>
+        <h2>Detect Text:</h2>
+        <CopyButton text={text}/>
+      </div>
+
+
       <pre className="detect-image-text">{text}</pre>
     </>
   )
