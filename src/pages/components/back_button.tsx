@@ -14,7 +14,5 @@ export default function BackButton(){
                 Back
             </Button>
         </div>
-
-        
     )
 }
