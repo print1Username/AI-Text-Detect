@@ -1,6 +1,6 @@
 import type { InputHTMLAttributes } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Clipboard, ArrowBigRight } from 'lucide-react'
+import { ClipboardPaste, ArrowBigRight } from 'lucide-react'
 
 interface LinkBarProps
   extends Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'value'> {
@@ -44,7 +44,7 @@ export default function LinkBar({
         className="link-bar-clipboard"
         aria-label="Paste from clipboard"
       >
-        <Clipboard />
+        <ClipboardPaste />
       </button>
 
       <button
